@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>multiplication table</title>
+
+
+ </head>   
+<body>
+
+
+<form id="frm1">
+main <input type="text" name="main"><br>
+  Multiplier <input type="text" name="multiplier"><br><br>
+</form>
+
+
+
+<button onclick="myFunction()"> Go </button>
+<script>
+    
+function myFunction() {
+
+        const getForm = document.getElementById('frm1');
+     const main = getForm.main.value;
+    const multiplier = getForm.multiplier.value;  
+	
+    let holder = ''
+
+     for( let a = 1; a <= main; a++) {
+         for (let b  = 1;  b <= multiplier; b++) {
+
+            holder += `${a} x ${b} = ${a * b}<br>`
+            
+            
+        }
+        holder = holder + "===================================<br>"
+    }
+            document.getElementById("frm1").innerHTML = holder;
+}
+</script>
+
+</body>
+</html>
